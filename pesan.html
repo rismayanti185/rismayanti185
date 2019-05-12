@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>Order</title>
+	<script type="text/javascript">
+		function klik(){
+			var a = 150000;
+			var b = document.getElementById("jumlah").value;
+		}
+		function klik2(){
+			var nama=document.getElementById("nama").value;
+			var no=document.getElementById("no").value;
+			var alamat=document.getElementById("alamat").value;
+			var jumlah=document.getElementById("jumlah").value;
+			if (form.nama.value=="") {
+				a=nama.innerHTML="Nama Harus Diisi ! \n";
+			}
+			else if(form.nama.value!=""){
+				a=nama.innerHTML="";
+			}
+			if (form.no.value=="") {
+				b=no.innerHTML="Nomor Telpon Harus Diisi ! \n";
+			}
+			else if(form.nama.value!=""){
+				b=no.innerHTML="";
+			}
+			if (form.alamat.value=="") {
+				c=alamat.innerHTML="Alamat Harus Diisi ! \n";
+			}
+			else if(form.nama.value!=""){
+				c=alamat.innerHTML="";
+			}
+			if (form.jumlah.value=="") {
+				d=jumlah.innerHTML="Jumlah Barang Harus Diisi ! \n";
+			}
+			else if(form.nama.value!=""){
+				d=jumlah.innerHTML="";
+			}
+			if (form.nama.value=="" || form.no.value=="" || form.alamat.value==""||form.jumlah.value=="") {
+				alert(a+b+c+d);
+			}
+			else{
+				document.form.submit();
+				return val_form_this_page();
+				window.close();
+			}
+		}
+		function klik3(){
+			alert("Pesanan Dibatalkan !")
+			window.close();
+		}
+	</script>
+</head>
+<body background="greyy.jpg">
+<form name="form" >
+<table>
+<tr>
+	<td style="font-family: tekton pro; font-size: 20; color: #f3c24c;">Nama</td>
+	<td><input type="text" name="nama" id="nama" class="x" style="width: 167px;">*</td>
+</tr>
+<tr>
+	<td style="font-family: tekton pro; font-size: 20; color: #f3c24c;">No HP</td>
+	<td><input type="tel" name="no" id="no" class="x" style="width: 167px;">*</td>
+</tr>
+<tr>
+	<td style="font-family: tekton pro; font-size: 20; color: #f3c24c;">Alamat</td>
+	<td><input type="text" name="alamat" id="alamat" class="x" style="width: 167px;">*</td>
+</tr>
+<tr>
+	<td style="font-family: tekton pro; font-size: 20; color: #f3c24c;">Jumlah Barang</td>
+	<td><input type="number" name="jumlah" id="jumlah" class="x" min="1" style="width: 167px;">*</td>
+</tr>
+<tr align="center">
+	<td style="font-family: tekton pro; font-size: 20; color: white;"><a class="y" onclick="klik2()" style="cursor: pointer;" >Selesai</a></td>
+	<td ><a style="font-family: tekton pro; font-size: 20; color: white;" href="#" class="y" onclick="klik3()">Batal</a></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

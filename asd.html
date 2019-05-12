@@ -1,0 +1,44 @@
+<html>
+<script language="javascript">
+	function link(url){
+		window.location = url
+	}
+	function masyuk(){
+		var username = document.login.username.value;
+		var password = document.login.password.value;
+
+		if(username=="admin" && password=="admin"){
+			alert("Selamat anda berhasil login");
+			link('index.html');
+		}
+		else if(username!="admin" && password=="admin"){
+			alert("Username anda salah");
+		}
+		else if(username=="admin" && password!="admin"){
+			alert("Password anda Salah");
+		}
+		else{
+			alert("Username dan password anda salah");
+		}
+	}
+		</script>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+
+<body bgcolor="#2b2425">
+<form name="login">
+
+<div id="awal">
+<div class="login" align="center"><b>Login<br><br></div>
+<hr width="280px" size="2" style="margin-top: 25px;"></hr>
+<div class="name" align="center">
+<input type="text" name="username" placeholder="Username" style="width: 225px; padding-left: 10px; border-radius: 20px; height: 40px; margin-left: 0px;  font-family:britannic; font-size:16; ">
+<p>
+<input type="password" name="password" placeholder="Password" align="center"  style="width: 225px; border-radius: 20px; height: 40px; margin-left: 0px;  padding-left: 10px; font-family:britannic; font-size:16;"></p>
+<input type="button" style="background-color: #5f5053; color: white; width: 110; height: 50; font-family: rockwell; font-size: 20;  margin-left: 130px; margin-top: 20px; border: 1px solid white; cursor: pointer;" value="Login" onclick="masyuk()">
+<input type="reset"  style="background-color: #5f5053; color: white; width: 110; height: 50; font-family: rockwell; font-size: 20; margin-left: -110px; margin-top: -68px; border: 1px solid white; cursor: pointer;" value="Reset" onclick="Reset">
+</div></div></div>
+</form>
+</body>
+</html>
